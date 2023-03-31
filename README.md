@@ -1,1 +1,1 @@
-# MERN-App-With-Kerberos-Auth-Protocol-Example
+# MERN-App-With-Kerberos-Auth-Example
