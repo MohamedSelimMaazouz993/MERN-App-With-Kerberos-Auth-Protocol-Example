@@ -1,7 +1,46 @@
 
 # MERN App With Kerberos Auth Example
 
+## Kerberos or Cerberos in Greek Methology :
+
+In Greek mythology, Cerberus (/ˈsɜːrbərəs/;[2] Greek: Κέρβερος Kérberos [ˈkerberos]), often referred to as the hound of Hades, is a multi-headed dog that guards the gates of the Underworld to prevent the dead from leaving. He was the offspring of the monsters Echidna and Typhon, and was usually described as having three heads, a serpent for a tail, and snakes protruding from multiple parts of his body. Cerberus is primarily known for his capture by Heracles, the last of Heracles' twelve labours.
+
+![artworks-alOkhAoOQIC0hBtb-yyYYpw-t500x500](https://user-images.githubusercontent.com/71633887/229261421-2784ed59-ee70-40ee-ba25-d4d8e50ce6b2.jpg)
+
 ## Introduction
+
+### What is Kerberos Auth ?
+
+- Kerberos (/ˈkɜːrbərɒs/) is a computer-network authentication protocol that works on the basis of tickets to allow nodes communicating over a non-secure network to prove their identity to one another in a secure manner. Its designers aimed it primarily at a client–server model, and it provides mutual authentication—both the user and the server verify each other's identity. Kerberos protocol messages are protected against eavesdropping and replay attacks.
+Kerberos builds on symmetric-key cryptography and requires a trusted third party, and optionally may use public-key cryptography during certain phases of authentication. Kerberos uses UDP port 88 by default.
+The protocol was named after the character Kerberos (or Cerberus) from Greek mythology, the ferocious three-headed guard dog of Hades.
+ 
+ ![0_Qeh4qhAIiY1zxjCR](https://user-images.githubusercontent.com/71633887/229261451-aa2bcb83-3b26-49a3-9ddb-382da5ab4b3b.gif)
+
+###  Kerberos Overview 
+
+Kerberos authentication protocol takes care of both of these tasks. It is designed for security and authentication designed by MIT not IIT mind you.
+
+
+Suppose a client wants to access a file server, with Kerberos he would have to be verified by a third-party called KEY DISTRIBUTION CENTER (KDC) which has two servers 
+
+- Authentication Server (AS)
+- Ticket Granting Server (TGS)
+
+![0_jtaY8zhL4KtvGOrI](https://user-images.githubusercontent.com/71633887/229261626-95512ac5-c9b3-4f72-a00c-fe9fb0edfcd9.png)
+
+So, the steps that are involved in the process of the user connecting to the file server are as follows:
+
+The client sends a request stating that he needs access to the file server, to the AS providing the user id and the request is partially encrypted with by his password which he never sends over the unsecured network, but uses as an encryption key. The AS will try to look up the user id in the database and try to decrypt his request with the password as the key. And this sharing of the secret key (password) among the client and the AS is how the user gets verified. After this, the AS sends a TGT (Ticket Granting Ticket) which is encrypted with another secret key, back to the client.
+The client then sends the TGT to the TGS along with his request(“i want the access to the file server”). The TGS then decrypts the TGT with a secret key that the AS shares with the TGS. After this the TGS issues the client a token encrypted with another secret key (3rd one). This secret key is shared among the TGS and the file server. The client sends the token to the file server.
+The file server then encrypts this token with a key shared among itself and the TGS and the client is allowed to use the resources for the time mentioned in the token.
+
+
+
+The client and the AS share the secret key which is his password.
+AS and the TGS share a secret key.
+TGS and the file server share the same secret key.
+
 
 Implementing Kerberos authentication into a MERN (MongoDB, Express, React, Node.js) app can be a complex task, as it involves integrating several different technologies and components. Here's a general overview of the steps involved:
 
