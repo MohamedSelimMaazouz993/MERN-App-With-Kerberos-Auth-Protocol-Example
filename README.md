@@ -48,13 +48,13 @@ TGS and the file server share the same secret key.
 
 ### To Sum Up : 
 
-Authentication is a complex process, but here is a simplified rundown:
+Authentication is a complex process, but here is a simplified rundown :
 
-Client enters login information.
-The Kerberos client creates an encryption key and sends a message to the authentication server (AS).
-The AS uses this key to create a temporary session key and sends a message to the ticket granting service (TGS).
-TGS grants the client a ticket and server session key.
-Client uses these to authenticate with the server and get access.
+1. Client enters login information.
+2. The Kerberos client creates an encryption key and sends a message to the authentication server (AS).
+3. The AS uses this key to create a temporary session key and sends a message to the ticket granting service (TGS).
+4. TGS grants the client a ticket and server session key.
+5. Client uses these to authenticate with the server and get access.
 
 ## Implimenting Kerberos Auth Protocol in a MERN App :
 
