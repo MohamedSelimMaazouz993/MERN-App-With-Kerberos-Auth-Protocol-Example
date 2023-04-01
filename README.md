@@ -135,6 +135,8 @@ kadmin: ktadd -k /path/to/app.keytab HTTP/app.msm.com
 
 ## MERN Meaning ^_^:
 
+MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack.
+
 **Database:** MongoDB
 
 **Server:** Express
