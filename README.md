@@ -60,7 +60,7 @@ Authentication is a complex process, but here is a simplified rundown :
 
 Implementing Kerberos authentication into a MERN (MongoDB, Express, React, Node.js) app can be a complex task, as it involves integrating several different technologies and components. Here's a general overview of the steps involved:
 
- 1. Install the necessary dependencies:
+ 1. Install The Necessary Dependencies On The Server Side :
  ```bash
 - "kerberos" library for Node.js
 
@@ -145,7 +145,7 @@ MERN stands for MongoDB, Express, React, Node, after the four key technologies t
 
 **Environment :** Node.js
 
-## To Run this MERN App : 
+## To Run This MERN App : 
 
 You Need To Execute Server & Client in Different Terminal 
 
@@ -168,6 +168,6 @@ For Client :
 
 [Demo Live](https://gentle-gingersnap-4e8040.netlify.app/) 
 
-Note you Need To Generate A Key So this App Can Works 
+Note : You Need To Generate A Key So this App Can Works 
 
 2023 Copyright © Mohamed Selim Maazouz
