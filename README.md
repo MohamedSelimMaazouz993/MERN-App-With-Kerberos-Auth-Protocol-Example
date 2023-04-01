@@ -145,9 +145,9 @@ MERN stands for MongoDB, Express, React, Node, after the four key technologies t
 
 **Environment :** Node.js
 
-## Installation
+## To Run this MERN App : 
 
-Install this app with npm
+You Need To Execute Server & Client in Different Terminal 
 
  For Server: 
 
