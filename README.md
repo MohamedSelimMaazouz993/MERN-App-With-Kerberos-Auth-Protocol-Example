@@ -100,7 +100,7 @@ Implementing Kerberos authentication into a MERN (MongoDB, Express, React, Node.
 
 5 . Set the realm and KDC keytab path for the krb5 module :
 
-- We set the krb5.realm and krb5.kdc variables to the appropriate values for our server environment. We also set the krb5.keytabPath variable to the path of the keytab file that contains the necessary authentication information :
+- We set the krb5.realm and krb5.kdc variables to the appropriate values for our server environment. We also set the krb5.keytabPath variable to the path of the keytab file that contains the necessary authentication information:
 
 ```bash
 krb5.realm = 'MYREALM.COM'; (MYREALM is MSM in This example Which Is My Name )
@@ -168,6 +168,6 @@ For Client :
 
 [Demo Live](https://gentle-gingersnap-4e8040.netlify.app/) 
 
-Note you Need To Generate A Key So this App Can Works 
+Note : You Need To Generate A Key So this App Can Work 
 
 2023 Copyright © Mohamed Selim Maazouz
