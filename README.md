@@ -114,7 +114,7 @@ Note that the krb5 module must be configured before it is used to authenticate t
 
 Creating keytab files requires administrative access to the Kerberos realm and the KDC, and the ability to create and manage service principals. It's important to follow best practices for keytab management and keep keytab files secure to prevent unauthorized access.
 
-1. Create a service principal in your Kerberos realm using the kadmin command-line tool. For example, to create a service principal for a web application with a hostname of app.example.com, you could use the following command :
+1. Create a service principal in your Kerberos realm using the kadmin command-line tool. For example, to create a service principal for a web application with a hostname of app.example.com, you could use the following command:
 
 ```bash
 kadmin: addprinc -randkey HTTP/app.msm.com
