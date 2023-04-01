@@ -17,7 +17,7 @@ The protocol was named after the character Kerberos (or Cerberus) from Greek myt
  
  ![0_Qeh4qhAIiY1zxjCR](https://user-images.githubusercontent.com/71633887/229261451-aa2bcb83-3b26-49a3-9ddb-382da5ab4b3b.gif)
 
-###  Kerberos Overview 
+##  Kerberos Overview 
 
 Kerberos authentication protocol takes care of both of these tasks. It is designed for security and authentication designed by MIT not IIT mind you.
 
@@ -31,16 +31,28 @@ Suppose a client wants to access a file server, with Kerberos he would have to b
 
 So, the steps that are involved in the process of the user connecting to the file server are as follows:
 
-The client sends a request stating that he needs access to the file server, to the AS providing the user id and the request is partially encrypted with by his password which he never sends over the unsecured network, but uses as an encryption key. The AS will try to look up the user id in the database and try to decrypt his request with the password as the key. And this sharing of the secret key (password) among the client and the AS is how the user gets verified. After this, the AS sends a TGT (Ticket Granting Ticket) which is encrypted with another secret key, back to the client.
-The client then sends the TGT to the TGS along with his request(“i want the access to the file server”). The TGS then decrypts the TGT with a secret key that the AS shares with the TGS. After this the TGS issues the client a token encrypted with another secret key (3rd one). This secret key is shared among the TGS and the file server. The client sends the token to the file server.
-The file server then encrypts this token with a key shared among itself and the TGS and the client is allowed to use the resources for the time mentioned in the token.
+- The client sends a request stating that he needs access to the file server, to the AS providing the user id and the request is partially encrypted with by his password which he never sends over the unsecured network, but uses as an encryption key. The AS will try to look up the user id in the database and try to decrypt his request with the password as the key. And this sharing of the secret key (password) among the client and the AS is how the user gets verified. After this, the AS sends a TGT (Ticket Granting Ticket) which is encrypted with another secret key, back to the client.
+- The client then sends the TGT to the TGS along with his request(“i want the access to the file server”). The TGS then decrypts the TGT with a secret key that the AS shares with the TGS. After this the TGS issues the client a token encrypted with another secret key (3rd one). This secret key is shared among the TGS and the file server. The client sends the token to the file server.
+- The file server then encrypts this token with a key shared among itself and the TGS and the client is allowed to use the resources for the time mentioned in the token.
 
+![1_Qajr2liumm5kO_mGEwxc6g](https://user-images.githubusercontent.com/71633887/229261775-b84d91fd-7c4b-43a6-9655-ce95bfc17488.PNG)
 
 
 The client and the AS share the secret key which is his password.
 AS and the TGS share a secret key.
 TGS and the file server share the same secret key.
 
+### To Sum Up : 
+
+Authentication is a complex process, but here is a simplified rundown:
+
+Client enters login information.
+The Kerberos client creates an encryption key and sends a message to the authentication server (AS).
+The AS uses this key to create a temporary session key and sends a message to the ticket granting service (TGS).
+TGS grants the client a ticket and server session key.
+Client uses these to authenticate with the server and get access.
+
+## Implimenting Kerberos Auth Protocol in a MERN App :
 
 Implementing Kerberos authentication into a MERN (MongoDB, Express, React, Node.js) app can be a complex task, as it involves integrating several different technologies and components. Here's a general overview of the steps involved:
 
@@ -149,3 +161,5 @@ For Client :
 ## Demo Link :
 
 [Demo Live](https://gentle-gingersnap-4e8040.netlify.app/) 
+
+Note you Need To Generate A Key So this App Can Works 
