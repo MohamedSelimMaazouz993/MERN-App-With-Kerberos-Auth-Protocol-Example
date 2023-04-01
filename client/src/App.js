@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import Footer from './Footer';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -15,6 +16,7 @@ function App() {
   }
 
   return (
+    <>
     <Container className="d-flex flex-column justify-content-center align-items-center vh-100">
       <h1>MERN App With Kerberos Auth Example</h1>
       <Form onSubmit={handleLogin}>
@@ -28,7 +30,9 @@ function App() {
         </Form.Group>
         <Button variant="primary" type="submit">Log In</Button>
       </Form>
+    <Footer/>
     </Container>
+    </>
   );
 }
 
