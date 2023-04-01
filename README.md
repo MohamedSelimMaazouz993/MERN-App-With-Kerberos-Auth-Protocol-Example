@@ -1,7 +1,7 @@
 
 # MERN App With Kerberos Auth Example
 
-## Kerberos or Cerberos in Greek Methology :
+## Kerberos or Cerberus in Greek Methology :
 
 In Greek mythology, Cerberus (/ˈsɜːrbərəs/;[2] Greek: Κέρβερος Kérberos [ˈkerberos]), often referred to as the hound of Hades, is a multi-headed dog that guards the gates of the Underworld to prevent the dead from leaving. He was the offspring of the monsters Echidna and Typhon, and was usually described as having three heads, a serpent for a tail, and snakes protruding from multiple parts of his body. Cerberus is primarily known for his capture by Heracles, the last of Heracles' twelve labours.
 
