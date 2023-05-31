@@ -170,4 +170,4 @@ For Client :
 
 Note : You Need To Generate A Keytab file and add it to the server folder  So this MERN App can actually works
 
-2023 Copyright © Mohamed Selim Maazouz
+2023 Copyright © Mohamed Selim Maazouz & Fatma Sakka
